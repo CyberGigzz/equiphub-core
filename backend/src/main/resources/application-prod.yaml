@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    # In production, credentials should be injected via environment variables
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      # 'validate' will verify the DB schema matches entities, but won't change the DB
+      ddl-auto: validate
+    show-sql: false # Don't log SQL in prod for performance and security
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+

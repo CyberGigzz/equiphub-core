@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: equiphub-core
+  profiles:
+    active: dev # This makes 'dev' the default profile
+
+server:
+  port: 8080
